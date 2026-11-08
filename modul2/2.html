@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dice probability calculator</title>
+    </head>
+    <body>
+        <h1>Probability Calculator</h1>
+        <button onclick="calculate()">calculate-probability</button>
+        <p id="result"></p>
+        <script>
+            function calculate(){
+                let number=Number(prompt("enter the number of dice:"));
+                let target=Number(prompt("Enter the target sum:"));
+                let success=0;
+                let simulations=10000;
+                for(let i=1;i<=simulations;i++){
+                    let sum=0;
+                    for(let j=0;j<=number;j++){
+                        let dice=Math.floor(Math.random()*6)+1;
+                        sum=sum+dice;
+                    }
+                    if(sum==target){
+                        success++;
+                    }
+                }
+                let probability=(success/simulations)*100;
+                document.getElementById("result").innerHTML=
+                "probabiltiy:"+probability+"%";
+            }
+        </script>
+    </body>
+</html>

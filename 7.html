@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dice Roller</title>
+    </head>
+    <body>
+        <h1>Dice Roller</h1>
+        <button onclick="rollDice()">Roll Dice</button>
+        <p id="result"></p>
+        <script>
+            function rollDice(){
+                let number=Number(prompt("enter the number:"))
+                let sum=0;
+                for(let i=1;i<=number;i++){
+                    let dice=Math.floor(Math.random()*6)+1;
+                    sum=sum+dice;
+                }
+                document.getElementById("result").innerHTML=
+                "The sum of dice rolls is:"+sum;
+            }
+        </script>
+    </body>
+</html>

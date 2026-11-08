@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sorting Hat</title>
+    </head>
+    <body>
+        <h1>Hogwarts Sorting Hat</h1>
+        <button onclick="sortingHat()">Start sorting</button>
+        <p id="result"></p>
+        <script>
+            let name=prompt("enter your name:");
+            let number=Math.floor(Math.random()*4)+1;
+            let house;
+            if(number==1){
+                house="gryffindor;"
+            }
+            else if(number==2){
+                house="slytherin";
+            }
+            else if(number==3){
+                house="hufflepuff";
+            }
+            else{
+                house="ravenclaw";
+            }
+            console.log("you are",name,house);
+        </script>
+    </body>
+</html>

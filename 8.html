@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leap Years</title>
+</head>
+<body>
+
+    <h1>Leap Year Finder</h1>
+
+    <button onclick="findleapyears()">Find Leap Years</button>
+
+    <ul id="results"></ul>
+
+    <script>
+        function findleapyears() {
+
+            let start = Number(prompt("Enter the initial year:"));
+            let end = Number(prompt("Enter the end year:"));
+
+            let output = "";
+
+            for (let year = start; year <= end; year++) {
+
+                if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+
+                    output += "<li>" + year + "</li>";
+
+                }
+            }
+         document.getElementById("results").innerHTML = output;
+        }
+    </script>
+</body>
+</html>

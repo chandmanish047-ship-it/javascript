@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>leap year checker</title>
+    </head>
+    <body>
+        <h1>leap year checker</h1>
+        <button onclick="checkyear()">check year</button>
+        <p id="result"></p>
+        <script>
+            function checkyear(){
+                let year=Number(prompt("enter the year:"));
+                if(year%400==0){
+                    document.getElementById("result").innerHTML=
+                    year+"is leap year";
+                }
+                else if(year%100==0){
+                    document.getElementById("result").innerHTML=
+                    year+"is not leap year";
+                }
+                else if(year%4==0){
+                    document.getElementById("result").innerHTML=
+                    year+"is a leap year";
+                }
+                else{
+                    document.getElementById("result").innerHTML=
+                    year+"is not a leap year";
+                }
+            }
+        </script>
+    </body>
+</html>

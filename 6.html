@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Square Root Calculator</title>
+    </head>
+    <body>
+        <h1>Square Root Calculator</h1>
+        <button onclick="calculate()">start calculation</button>
+        <p id="result"></p>
+        <script>
+            function calculate(){
+                let choice=confirm("should i calculate or not:");
+                if(choice==true){
+                    let number=Number(prompt("enter the number:"))
+                        if(number<0){
+                            document.getElementById("result").innerHTML=
+                            "Square of negative number is not possible";
+                        }
+                        else{
+                            let answer=Math.sqrt(number);
+                            document.getElementById("result").innerHTML=
+                            "the square root is "+answer;
+                        }
+                    }
+                    else{
+                        document.getElementById("result").innerHTML=
+                        "the square root is not calculated";
+                    }
+                }
+        </script>
+    </body>
+</html>
